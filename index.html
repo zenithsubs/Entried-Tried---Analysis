@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-Refresh Iframes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Adds padding and border into the element's total width and height */
+        }
+        h1 {
+            font-size: 30px;
+            background-color: #000000;
+            color: #ffffff;
+            padding: 8px 14px;
+        }
+        ol {
+            border: 2px solid #F3F3F3;
+            padding: 14px 14px 14px 32px;
+        }
+        .iframe-container, .iframe2-container {
+            display: grid;
+            grid-template-columns: 45% 45%; /* Defines two columns each taking 45% of the width */
+            column-gap: 10%; /* Spacing between the two columns */
+        }
+        .iframe2-container {
+            grid-template-columns: 45% 27% 27%; /* Adjusts for three columns where the first is wider */
+            column-gap: 0%; /* Smaller gap for the narrower columns */
+            align-items: start; /* Aligns iframes to the top of the container */
+        }
+        iframe {
+            width: 100%; /* Makes the iframe take the full width of the grid column */
+            height: 490px; /* Set the height of the iframe */
+            border: none; /* Removes the border around the iframe */
+        }
+
+        .vertical-iframe {
+            width:400px;
+            height:0px;
+            display:block;
+            margin-top:0px;
+        }
+        .vertical-iframe2 {
+            width:400px;
+            height:100px;
+            display:block;
+            margin-top:-250px;
+            margin-left:1350px;
+        }
+        </style>
+    </head>
+<body>
+    <h1>コンディション別・測定可能なズレの分析</h1>
+    <p> 三十秒ごとにアップデートされます。</p>
+    <ol>
+        <li>Long、Shortの順番に表示しています。</li>
+        <li>各コンディションのパフォーマンスを確認するには、マウスカーソルをグラフ上に運んでください。</li>
+        <li>"C"はコンディションの省略です。</li>
+    </ol>
+    <h1>Longデータ</h1>
+    <div class="iframe-container">
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4Nh5thkk8hTR_nk6uYMJT3lS8e9vnjLWtnh8Kqb0TF-Gw8Hc47YsvZ_AwMeki2VZnRPpS-UOyA23-/pubchart?oid=852252970&amp;format=interactive"></iframe>
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4Nh5thkk8hTR_nk6uYMJT3lS8e9vnjLWtnh8Kqb0TF-Gw8Hc47YsvZ_AwMeki2VZnRPpS-UOyA23-/pubchart?oid=957398707&amp;format=interactive"></iframe>
+    </div>  
+    <p>
+    </p>  
+    <div class="iframe-container">
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4Nh5thkk8hTR_nk6uYMJT3lS8e9vnjLWtnh8Kqb0TF-Gw8Hc47YsvZ_AwMeki2VZnRPpS-UOyA23-/pubchart?oid=1276935713&amp;format=interactive"></iframe>
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4Nh5thkk8hTR_nk6uYMJT3lS8e9vnjLWtnh8Kqb0TF-Gw8Hc47YsvZ_AwMeki2VZnRPpS-UOyA23-/pubchart?oid=539985636&amp;format=interactive"></iframe>
+    </div>  
+    <h1>Shortデータ</h1>
+    <p>
+    </p>  
+    
+    <div class="iframe-container">
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4Nh5thkk8hTR_nk6uYMJT3lS8e9vnjLWtnh8Kqb0TF-Gw8Hc47YsvZ_AwMeki2VZnRPpS-UOyA23-/pubchart?oid=1685626409&amp;format=interactive"></iframe>
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4Nh5thkk8hTR_nk6uYMJT3lS8e9vnjLWtnh8Kqb0TF-Gw8Hc47YsvZ_AwMeki2VZnRPpS-UOyA23-/pubchart?oid=1049959086&amp;format=interactive"></iframe>
+    </div> 
+    <div class="iframe-container">
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4Nh5thkk8hTR_nk6uYMJT3lS8e9vnjLWtnh8Kqb0TF-Gw8Hc47YsvZ_AwMeki2VZnRPpS-UOyA23-/pubchart?oid=642004164&amp;format=interactive"></iframe>
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4Nh5thkk8hTR_nk6uYMJT3lS8e9vnjLWtnh8Kqb0TF-Gw8Hc47YsvZ_AwMeki2VZnRPpS-UOyA23-/pubchart?oid=2039938553&amp;format=interactive"></iframe>
+    </div> 
+    <h1>Both Direction</h1>
+    <div class="iframe2-container">
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4Nh5thkk8hTR_nk6uYMJT3lS8e9vnjLWtnh8Kqb0TF-Gw8Hc47YsvZ_AwMeki2VZnRPpS-UOyA23-/pubchart?oid=354035274&amp;format=interactive"></iframe>
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4Nh5thkk8hTR_nk6uYMJT3lS8e9vnjLWtnh8Kqb0TF-Gw8Hc47YsvZ_AwMeki2VZnRPpS-UOyA23-/pubchart?oid=264399093&amp;format=interactive"></iframe>
+
+        <div class="vertical-iframe"> 
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4Nh5thkk8hTR_nk6uYMJT3lS8e9vnjLWtnh8Kqb0TF-Gw8Hc47YsvZ_AwMeki2VZnRPpS-UOyA23-/pubchart?oid=692405292&amp;format=interactive"></iframe>
+        </div>
+    <div class="vertical-iframe2"> 
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4Nh5thkk8hTR_nk6uYMJT3lS8e9vnjLWtnh8Kqb0TF-Gw8Hc47YsvZ_AwMeki2VZnRPpS-UOyA23-/pubchart?oid=351853495&amp;format=interactive"></iframe>
+    </div> 
+
+
+</body>
+</html>
